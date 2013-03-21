@@ -1,3 +1,10 @@
+<% if user_signed_in? %>
+# if logged in show this
+<h1>Congrats on the first step!</h1>
+<% else %>
+
+
+
 <div class="hero-unit">
 	<h1>Welcome to Followspot!</h1>
 	<p>
@@ -5,8 +12,7 @@
 		<%= link_to "One month rails", "http://onemonthrails.com" %>
 	</p>
 	<p>
-	 	<a class="btn btn-primary btn-large">
-	      Start getting social
-	    </a>
+	 	<%= link_to "Start getting social!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 	</p>
 </div>
+<% end %>
